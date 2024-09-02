@@ -58,7 +58,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 ),
                 child: Text('Verify'),
                 onPressed: () {
-                  // Directly navigate to the RegisterPage without verifying the OTP
+                  // Directly navigate to the RegisterPage without verifying the OTP because POST Otp Screen- Otp verfication api: http://devapiv4.dealsdray.com/api/v2/user/otp/verification is not working so it is not  giving a proper Json response on Postman that's why I routed the page directly from OTP Screen-to-Register Screen.
                   Navigator.push(
                     context,
                     MaterialPageRoute(
