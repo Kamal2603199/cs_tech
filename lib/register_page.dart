@@ -44,7 +44,8 @@ class _MyPageState extends State<RegisterPage> {
       if (response.statusCode == 200) {
         final Map<String, dynamic> jsonResponse = json.decode(response.body);
         ApiResponse apiResponse = ApiResponse.fromJson(jsonResponse);
-
+        
+        //Directly navigate to the Homescreen page without registering the user because POST Register Screen- Email with referral api: http://devapiv4.dealsdray.com/api/v2/user/email/referral is not working so it is not  giving a proper Json response on Postman that's why I routed the page directly from Register screen-to-Homescreen page. 
         Navigator.pushAndRemoveUntil(context,
           MaterialPageRoute(
             builder: (context) =>
